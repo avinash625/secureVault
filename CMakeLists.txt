@@ -3,4 +3,4 @@ project(secureVault)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(secureVault main.cpp)
+add_executable(secureVault Driver.cpp)
