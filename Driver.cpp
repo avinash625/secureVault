@@ -1,12 +1,18 @@
 #include <iostream>
 #include "VaultUtils.cpp"
+#include "sha256.h"
 
 using namespace  std;
 
 int main() {
+
     std::cout << "Welcome to SecureValut" << std::endl;
-    if(isValutPresent()) {
+    if(isVaultPresent()) {
         std::cout << "Vault found, please authenticate:" << std::endl;
+        authenticate();
+        char ch[64];
+        cin >>  ch;
+        cout<<"entered string is "<<ch<<endl;
     }else{
         cout<<"Vault missing! creating new one"<<endl;
         if(createVault() == 0){
